@@ -1,0 +1,8 @@
+AuthType Basic
+AuthName "Please enter your login and password"
+AuthUserFile /home/max/data/www/smehofor.setop.org/.htpwd
+Require user smehouser
+
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|upload|robots\.txt)
+RewriteRule ^(.*)$ /index.php/$1 [L]

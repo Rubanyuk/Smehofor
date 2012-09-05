@@ -1,0 +1,756 @@
+@import url(reset.css);
+
+
+html, body {height: 100%; min-height: %!important;/* задаем высоту тела документа */}
+
+/*Opera Fix
+body:before {
+content:none;
+height:100%;
+float:left;
+width:0;
+margin-top:-32767px;
+}*/
+
+.hide{display:none;}
+
+.wrapper {
+    width: 100%;
+    background-image: url(../images/Bg.jpg);
+    background-repeat: repeat;
+    background-color: #BFBFBF;
+    min-height:100%;
+    border: 0px solid black;
+		position:relative;
+    
+}
+
+.footer {
+    width: 100%;
+    background-image: url(../images/Bg.jpg);
+    background-repeat: repeat;
+    height: 223px;
+    border: 0px solid black;
+    position: absolute;
+		bottom:0;
+}
+
+
+
+/*.wrapper:first-child {background-color: green!important;}*/
+
+/* Начало Общего каркаса */
+
+.topLine {
+    height: 8px;
+    background-color: #cccccc;
+    background-image: url(../images/topLineBg.gif);
+    background-repeat: repeat-x;
+    padding-bottom: 0px;
+    border: 0px solid black;
+}
+
+.Header {height: 281px;width: 100%;}
+.Header-best {height: 291px;width: 100%;}
+.Header-one-section {height: 256px;width: 100%; border: 0px solid black;}
+
+#content {padding-bottom:223px;}
+
+1.headerText {
+    padding-bottom: 10px;
+}
+
+#bottomLine {
+    height: 8px;
+    width: 100%;
+    background-image: url(../images/topLineBg.gif);
+    background-repeat: repeat-x;
+    border: 0px solid black;
+}
+
+.iHeader {width: 978px;height: 281px;margin: 0 auto;position: relative;}
+.iHeader-best {width: 978px;height: 291px;margin: 0 auto;position: relative;}
+.iHeader-one-section {width: 978px;height: 291px;margin: 0 auto;position: relative;}
+
+#icontent {
+    width: 984px;
+    margin: 0 auto;
+    z-index: 2;
+    border: 0px solid black;
+    display: block;
+    position: relative;
+    
+}
+
+#ifooter {
+    width: 978px;
+    outline:0px solid #cc0000;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Конец Общего каркаса */
+
+/* Начало блока Header */
+
+.logo {
+    width: 148px;
+    height: 259px;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 32px;
+    display: block;
+    cursor: pointer;
+    outline:0px solid #cc0000;
+    z-index: 0;
+}
+
+.11logo-main {
+    width: 148px;
+    height: 259px;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 32px;
+    outline:0px solid #cc0000;
+}
+
+.rightBlock {
+    width: 812px;
+    height: 283px;
+    outline:0px solid #cc0000;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.topList {padding: 9px 0 10px 0;}
+.topList li {float: left;}
+.topList li a {font:bold 12px Trebuchet MS, sans-serif;color: #000000;padding: 0px 10px 0px 0;}
+.topList li a:hover { text-decoration: none; }
+
+.toplistInner {margin-top: -1px;}
+.toplistInner li {float: left;}
+.toplistInner li a {font:bold 12px Trebuchet MS, sans-serif;color: #000000;padding: 0px 10px 0px 0;}
+.toplistInner li a:hover { text-decoration: none; }
+
+.clear {clear:both;}
+
+.rightBlock p {
+    font: 12px Verdana, sans-serif;
+    color: #000000;
+    padding: 7px 0px 0px 0;
+    line-height: 18px;
+    margin: 0px 0 10px 0;
+}
+
+.sectionHeaderTxt {
+    font: 12px Verdana, sans-serif;
+    color: #000000;
+    padding: 15px 0px 0px 0;
+    line-height: 18px;
+    margin: 7px 0 10px 0 !important;
+}
+
+.dotLine1 {
+    background-image: url(../images/dotLineBg.png);
+    background-repeat: repeat;
+    height: 1px;
+    width: 812px;
+    outline:0px solid #000000;
+    margin-top: 10px;
+}
+
+.dotLine1-best {
+    background-image: url(../images/dotLineBg.png);
+    background-repeat: repeat;
+    height: 1px;
+    width: 812px;
+    outline:0px solid #000000;
+    margin-top: 12px;
+}
+
+.menuList a {font:bold 18px Trebuchet MS, sans-serif;color: #007EC7;padding: 0px 27px 0px 0;}
+.menuList {margin: 11px 0;}
+.menuList a:hover { text-decoration: none; color: #000000;}
+.menuList li a.menuListActive {
+    color: #000000;
+    text-decoration: none;
+    display:block ;
+    height: 24px;
+    background-color: #FFD800;
+    padding: 0px 7px;
+    margin: 0px 20px 0px 0;}
+
+.menuList li {float: left;}
+
+
+.menuList2 a {font:bold 18px Trebuchet MS, sans-serif;color: #007EC7;padding: 0px 27px 0px 0;}
+.menuList2 {margin: 11px 0;}
+.menuList2 a:hover { text-decoration: none; color: #000000;}
+.menuList2 li a.menuListActive {
+    color: #000000;
+    text-decoration: none;
+    display:block ;
+    height: 24px;
+    background-color: #ffffff;
+    padding: 0px 7px;
+    margin: 0px 20px 0px 0;}
+
+.menuList2 li {float: left;}
+
+
+.menuListBest a {font:bold 14px Trebuchet MS, sans-serif;color: #007EC7;padding: 0px 21px 0px 0;}
+.menuListBest {margin: 11px 0;}
+.menuListBest a:hover { text-decoration: none; color: #000000;}
+.menuListBest li a.menuListBestActive {color: #000000;text-decoration: none;}
+.menuListBest li {float: left;}
+.menuListBestFutTime {font:14px Trebuchet MS, sans-serif;color: #868686;text-decoration: none;padding: 0px 21px 0px 0;}
+.menuListBest li a.menuListBestBajan {text-decoration: none;}
+
+.dotLine2  {
+    background-image: url(../images/dotLineBg.png);
+    background-repeat: repeat;
+    height: 1px;
+    width: 812px;
+    margin: 15px 0;
+}
+
+.dotLine3 {
+    background-image: url(../images/dotLineBg.png);
+    background-repeat: repeat;
+    height: 1px;
+    width: 976px;
+    outline:0px solid #000000;
+}
+
+.dotLine4 {
+    background-image: url(../images/dotLineBg.png);
+    background-repeat: repeat;
+    height: 1px;
+    width: 976px;
+    margin: 15px 0;
+}
+
+.pagination1 p {
+    font:24px Trebuchet MS, sans-serif ;
+    color: #000000;
+    padding:0px 0 0 160px;
+    margin-top: -3px;
+}
+
+.pagination1 a {color: #007EC7;}
+.pagination1 a:hover {color: #000000; text-decoration: none;}
+
+.pagination1 a.arrows {font:bold 36px Trebuchet MS, sans-serif ;text-decoration: none;}
+
+.pagination1 .grayPoints {color: #565656;}
+.pagination1 .grayAarrows {font:bold 36px Trebuchet MS, sans-serif ;text-decoration: none;color:#565656;}
+.pagination2 .grayAarrows {font:bold 36px Trebuchet MS, sans-serif ;text-decoration: none;color:#565656;}
+
+.pagination2 p {
+    width: 500px;
+    font:24px Trebuchet MS, sans-serif ;
+    color: #000000;
+    padding:0 0 20px 0;
+    margin: -5px auto 0px auto;
+    outline:0px solid #000000;
+    text-align: center;
+}
+
+.pagination2 a {color: #007EC7;}
+.pagination2 a:hover {color: #000000; text-decoration: none;}
+
+.pagination2 a.arrows {
+    font:bold 36px Trebuchet MS, sans-serif ;
+    text-decoration: none;
+}
+
+.pagination2 .grayPoints {
+    color: #565656;
+}
+
+.searchInput {
+    width: 221px;
+    height: 27px;
+    background-image: url(../images/searchInputBg.png);
+    background-repeat: no-repeat;
+    border: 0px solid black;
+    background-color: transparent;
+    position: absolute;
+    top: 163px;
+    right:102px;
+    font: 12px Trebuchet MS, sans-serif;
+    color:#707070;
+    padding: 1px 10px 0 10px;
+}
+
+.searchInputBest {
+    width: 231px;
+    height: 25px;
+    background-image: url(../images/searchInputBg.png);
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 76px;
+    right:92px;
+    font: 12px Trebuchet MS, sans-serif;
+    color:#707070;
+    padding: 0 10px 0 10px;
+}
+
+.searchBut {
+    height: 31px;
+    width: 89px;
+    background-image: url(../images/searchButBg.png);
+    background-repeat: no-repeat;
+    border: none;
+    margin: 0px 0 0 10px;
+    padding: 0px 0 0 10px;
+    background-color: transparent;
+    position: absolute;
+    top: 160px;
+    right:-3px;
+    display: block;
+    cursor: pointer;
+}
+
+.searchButBest {
+    height: 31px;
+    width: 89px;
+    background-image: url(../images/searchButBg.png);
+    background-repeat: no-repeat;
+    background-position:0 0;
+    border: none;
+    margin: 0px 0 0 10px;
+    padding: 0px 0 0 10px;
+    background-color: transparent;
+    position: absolute;
+    top: 73px;
+    right:-3px;
+    display: block;
+    cursor: pointer;
+}
+
+.searchBut:hover {background-position: 0 -31px;}
+.searchButBest:hover {background-position: 0 -31px;}
+
+/* Конец блока Header */
+
+
+/* Начало блока content */
+
+/* Начало блока с шуткой */
+
+.jokeBlock1 {
+    outline:0px solid #cc0000;
+    padding: 0px 0 20px 0;
+}
+
+.topCont {
+    height: 24px;
+    background-image: url(../images/topContBg.png);
+    background-repeat: no-repeat;
+}
+
+.middleCont {
+    width:984px;
+    background-image: url(../images/middleContBg.png);
+    background-repeat: repeat-y;
+}
+
+.bottomCont {
+    height: 14px;
+    background-image: url(../images/bottomContBg.png);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.jokeRating {
+    height: 24px;
+    width: 330px;
+    outline:0px solid #000000;
+}
+
+.ratingNum {
+    height: 19px;
+    font:12px Trebuchet MS, sans-serif;
+    color:#000000;
+    padding: 5px 10px 0 10px ;
+    outline:0px solid #cc0000;
+    float: left;
+}
+
+.ratingButtons {
+    height: 24px;
+    width: 92px;
+    float: left;
+    outline:0px solid #cc0000;
+}
+
+.buttonLike {
+    background-image: url(../images/buttonLikeBg.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 24px;
+    width: 31px;
+    float: left;
+}
+
+.buttonLike:hover { background-position: 0 -24px;}
+
+.buttonMiddle {
+    background-image: url(../images/buttonMiddleBg.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 24px;
+    width: 30px;
+    float: left;
+}
+
+.buttonMiddle:hover { background-position: 0 -24px;}
+
+.buttonDisLike {
+    background-image: url(../images/buttonDisLikeBg.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 24px;
+    width: 31px;
+    float: left;
+}
+
+.buttonDisLike:hover { background-position: 0 -24px;}
+
+.disLikeButtons {
+    height: 24px;
+    width:137px ;
+    float: left;
+    outline:0px solid #cc0000;
+    margin-left: 13px;
+}
+
+.buttonDontBeleive {
+    background-image: url(../images/buttonDontBeleiveBg.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 24px;
+    width: 79px;
+    float: left;
+}
+
+.buttonDontBeleive:hover { background-position: 0 -24px;}
+
+.buttonBajan {
+    background-image: url(../images/buttonBajanBg.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 24px;
+    width: 58px;
+    float: left;
+}
+
+.buttonBajan:hover { background-position: 0 -24px;}
+
+.middleCont p {
+    font:14px Trebuchet MS, sans-serif;
+    color:#000000;
+    line-height: 18px;
+    padding: 10px 0 20px 20px ;
+    position: relative;
+    width: 943px;
+}
+
+.middleCont {
+    position: relative;
+    outline:0px solid #000000;
+}
+
+.SocNetIcons {
+    height: 16px;
+    width: 150px;
+    float: right;
+    outline:0px solid #cc0000;
+    position: absolute;
+    top:-11px;
+    right: 0;
+    margin-right: 12px;
+}
+
+.SocNetIcons li {
+    padding-right: 8px;
+}
+
+.shareTwitter {
+    background-image: url(../images/tw.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+
+.shareLj {
+    background-image: url(../images/lj.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+
+.shareOd {
+    background-image: url(../images/od.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+
+.shareFb {
+    background-image: url(../images/fb.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+
+.shareMailru {
+    background-image: url(../images/mailru.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+
+.shareVk {
+    background-image: url(../images/vk.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+
+.shareTwitter:hover { background-position: 0 -16px;}
+.shareLj:hover { background-position: 0 -16px;}
+.shareOd:hover { background-position: 0 -16px;}
+.shareFb:hover { background-position: 0 -16px;}
+.shareMailru:hover { background-position: 0 -16px;}
+.shareVk:hover { background-position: 0 -16px;}
+
+.jokeTimeAndNum {
+    font: 12px Trebuchet MS, sans-serif !important;
+    color:#000000;
+    float: right;
+    margin: 0 20px 15px 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+}
+
+.jokeAddTime {
+    font: 11px Trebuchet MS, sans-serif;
+    color:#7D7D7D;
+}
+
+.jokeSection {
+    font:12px Trebuchet MS, sans-serif;
+    color: #007EC7;
+    text-decoration: underline;
+}
+
+.jokeSection:hover {text-decoration: none;}
+
+.mainPageBanner {
+    height: 90px;
+    width: 728px;
+    margin: 0px auto 20px auto;
+    outline:0px solid #cc0000;
+}
+
+.mainPageBannerA {
+    height: 90px;
+    width: 728px;
+    background-image: url(../images/mainPageBanner.jpg);
+    background-repeat: no-repeat;
+    display: block;
+    cursor: pointer;
+}
+
+/* Конец блока content */
+
+/* Начало блока footer */
+
+.footerP {
+    font:12px Trebuchet MS, sans-serif;
+    color:#000000;
+    line-height: 18px;
+    margin: 28px 0 46px 0px;
+}
+
+.footerP a {
+    font:12px Trebuchet MS, sans-serif;
+    color:#007EC7;
+}
+
+.footerP a:hover { text-decoration: none;}
+
+#cointers {
+    width: 192px;
+    height: 66px;
+    outline:0px solid #000000;
+    float: right;
+    top: 120px;
+    right:39px;
+    position: absolute;
+    margin-bottom: 21px;
+}
+
+.coint1 {
+    background-image: url(../images/cointLI.gif);
+    background-repeat: no-repeat;
+}
+
+.coint2 {
+    background-image: url(../images/cointMail.png);
+    background-repeat: no-repeat;
+}
+
+.coint3 {
+    background-image: url(../images/cointYa.png);
+    background-repeat: no-repeat;
+}
+
+.coint4 {
+    background-image: url(../images/cointOs.png);
+    background-repeat: no-repeat;
+}
+
+#cointers li {
+    height: 31px;
+    width: 88px;
+    padding:  0 8px 4px 0;
+    float: left;
+}
+
+/* Конец блока footer */
+
+/*Добавление шутки*/
+.addjokeP {
+    font:13px Trebuchet MS, sans-serif !important;
+    color:#000000;
+    line-height: 18px;
+    padding: 10px 0 20px 88px !important;
+    position: relative;
+    width: 732px !important;
+    line-height: 18px;
+}
+
+.grayText {color:#777777;}
+
+.symbolsLeft {
+    text-align: right !important;
+    font:13px Trebuchet MS, sans-serif !important;
+    float: right;
+    margin-right: 161px;
+    color:#777777; 
+}
+
+#addJokeText h1 {font:24px Trebuchet MS, sans-serif;color:#000000;margin: 60px 0 0 230px; }
+
+h2 {font:italic 18px Trebuchet MS, sans-serif;color:#000000;margin: 39px 0 0 88px;}
+
+.inputRadio {margin: 10px 0 0 88px; padding: 0 0px}
+#selectSection {font:14px Trebuchet MS, sans-serif !important;color:#000000;}
+
+#jokeTextAreaBlock {
+    width: 732px;
+    height: 200px;
+    border-radius: 10px; 
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    border: 1px solid #999999;
+    margin: 10px 0 0 88px;
+    background-color: #ffffff;
+    
+}
+
+#jokeAddTextArea {
+    width: 705px;
+    height: 170px;
+    border: 0px solid #cc0000;
+    margin: 7px 0 0 7px;
+    padding: 6px;
+    color:#555555 ;
+}
+
+.radioButPadding {margin: 0px 0 0 7px;}
+
+#emailInput {
+    width: 231px;
+    height: 25px;
+    border-radius: 10px; 
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    border: 1px solid #999999;
+    margin: 10px 0 0 88px;
+    color: #777777;
+    padding: 0px 0 0 7px;
+}
+
+#kapcha {
+    width: 312px;
+    height: 123px;
+    outline:1px solid #cccccc;
+    margin-top: 20px;
+    margin-left: 88px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    background-color: #777777;
+}
+
+.AddError {
+    font:bold 13px Trebuchet MS, sans-serif !important;
+    margin: 10px 0 0 58px!important;
+    color:red!important;
+    padding: 0 0 0 30px!important;
+    background-image: url(../images/error.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+#sendButton {
+    width: 201px;
+    height: 60px;
+    background-image: url(../images/sendBut.png);
+    background-repeat: no-repeat;
+    margin: 50px 0 0px 390px;
+    cursor: pointer;
+}
+
+#sendButton:hover {background-position: 0 -60px;}
+#sendButton:active {background-position: 0 -120px;}
+
+#empty {width: 700px;height: 30px;}
+
+/*Конец добавление шутки*/
+
+/*Демотиваторы*/
+
+.demContent {padding-left: 50px;}
+.demContent p {padding-left: 0px; width: 885px;padding-bottom: 10px!important;}
+.demContent h2 {font: italic 22px Trebuchet MS, sans-serif;padding: 10px 0 0 0px;margin: 0 !important;}
+.demContent a {color:#0099C0 ;}
+.demContent a:hover {text-decoration: none;}
+.demContent img {padding: 0 0 10px 0px;}
+.tags {font-size:12px!important; font-family: Trebuchet MS, sans-serif;padding-bottom:0px!important;color:gray!important;}
+#vkComments {padding-bottom: 20px;}

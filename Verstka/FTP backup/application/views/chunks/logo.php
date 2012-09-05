@@ -1,0 +1,1 @@
+<a href="/"><div id="logo" title="Smehofor"></div></a>

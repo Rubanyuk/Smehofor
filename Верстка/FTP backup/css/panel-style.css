@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+body {
+	font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+	height: 100%;
+    background: url("/images/admin/menu_bg.gif");
+
+}
+a {
+	color: black;
+	outline: none;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+p {
+	margin: 0 0 18px
+}
+img {
+	border: none;
+}
+input {
+	vertical-align: middle;
+}
+#wrapper {
+	min-width: 1000px;
+	max-width: 1600px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+	height: 90px;
+	background: #FFE680;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#middle {
+	width: 100%;
+	padding: 0 0 100px;
+	height: 1%;
+	position: relative;
+}
+#middle:after {
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+#container {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+#content {
+	padding: 0 0 0 220px;
+}
+#content .moder td{
+    padding: 5px;
+}
+
+#content .moder th{
+    padding: 5px;
+    background: #CCCCCC;
+}
+li {
+    list-style-type: none;
+}
+/* Sidebar Left
+-----------------------------------------------------------------------------*/
+#sideLeft {
+	float: left;
+	width: 200px;
+	margin-left: -100%;
+	position: relative;
+	background: #B5E3FF;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+	margin: -50px auto 0;
+	min-width: 1000px;
+	max-width: 1600px;
+	height: 50px;
+	background: #BFF08E;
+}
+.leftMenu{
+margin-left:10px;
+height:60px;
+width:200px;
+}
+a{text-decoration:none;}
+.topMenu{
+padding-left:-20px;
+padding-top:10px;
+height:60px;
+}
+.save{
+width:24px;
+height:24px;
+/*background-image:url(../img/gtk-save-as.png);*/
+}
+
+.find tr{background:#99CCFF;}
+
+.find td{
+padding-left:5px;
+padding-right:5px;
+}
+
+.topMenu td{
+width:120px;
+}
+.tabHiker{
+background-color:#CCCCCC;}
+
+.tabHiker tr{
+background-color:#00B0F0}
+.window
+{
+   position: absolute;  
+   overflow: auto;  
+   left: 50%;  
+   top: 50%;
+   display:none;
+   z-index:1;
+   background-color:#996666;
+   border:#666666 medium 1px;;
+   padding-left:10px;
+   padding-right:10px;
+   padding-top:20px;
+   padding-bottom:20px;
+}
+.fileDelete{
+    width:40px;
+    background-color: #99CCFF;
+
+}

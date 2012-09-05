@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Smehofor</title>
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+<!--Начало wrapper-->
+    <div class="wrapper">
+        <div class="topLine"></div>
+        
+
+
+<!--Начало хэдера-->
+        <div class="Header">
+            <div class="iHeader">
+                <div class="logo"></div>
+                <div class="rightBlock">
+                    <ul class="topList">
+                    	<li><a href="#" title="О проекте">О проекте</a></li>
+                    	<li><a href="#" title="Новости">Новости</a></li>
+                    	<li><a href="#" title="FAQ">FAQ</a></li>
+                    	<li><a href="#" title="Реклама">Реклама</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                    <!--Начало текста в хедере -->
+                    <p hidden><span class="strong">SmehoFor</span> — это зеленый свет для качественного юмора: смешных шуток, историй, цитат и пр. Сортировка действует по принципу светофора: если шутка удачная - ставим зеленый цвет и она будет радовать посетителей своим искрометным юмором. Если так себе - желтый, а если совсем никак - то красный.  Ещё мы не боимся смотреть правде в лицо, поэтому у нас есть кнопки Хуйня, Пиздежь и Баян.</p>
+                    <!--Конец текста в хедере -->
+                    <div class="dotLine1"></div>
+                    <ul class="menuList">
+                    	<li><a href="#" class="menuListActive" title="Все">Все</a></li>
+                    	<li><a href="#" title="Лента">Лента</a></li>
+                    	<li><a href="#" title="Цитаты">Цитаты</a></li>
+                    	<li><a href="#" title="Истории">Истории</a></li>
+                        <li><a href="#" title="Анекдоты">Анекдоты</a></li>
+                        <li><a href="#" title="Демотиваторы">Демотиваторы</a></li>
+                        <li><a href="#" title="Статусы">Статусы</a></li>
+                        <li><a href="#" title="Видео">Видео</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                    <ul class="menuList2">
+                    	<li><a href="#" title="Новые">Новые</a></li>
+                    	<li><a href="#" title="Случайные">Случайные</a></li>
+                    	<li><a href="#" class="menuListActive" title="Лучшие">Лучшие</a></li>
+                    	<li><a href="#" title="Добавить">Добавить</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                    <div class="dotLine2"></div>
+                    
+                    <!--Начало Заголовка для страницы Добавит или простой текстовой страницы-->
+                    <div id="addJokeText">
+                        <h1>Добавить шутку</h1>
+                    </div>
+                    
+                    <!--Начало Поиска-->
+                    <form hidden>
+                        <input type="text" class="searchInput"  src="" name="123" value="Текст или номер цитаты"/><a href="#"><input type="submit" class="searchBut" name="searchButton" value=""/></a>
+                    </form>
+                    <!--Конец Поиска-->
+                    
+                    
+                    <!--Начало вставки меню Лучшее-->
+                    <div hidden>
+                     <ul class="menuListBest">
+                    	<li><a href="#" class="menuListBestActive" title="Сегодня">Сегодня</a></li>
+                    	<li><a href="#" title="За неделю">За неделю</a></li>
+                    	<li><a href="#" title="За месяц">За месяц</a></li>
+                    	<li><a href="#" title="2012">2012</a></li>
+                        <li><a href="#" title="2011">2011</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                    <ul class="menuListBest">
+                    	<li><a href="#" class="menuListBestActive" title="Январь">Январь</a></li>
+                    	<li><a href="#" title="Февраль">Февраль</a></li>
+                    	<li><a href="#" title="Март">Март</a></li>
+                    	<li class="menuListBestFutTime" title="Апрель">Апрель</li>
+                        <li class="menuListBestFutTime" title="Май">Май</li>
+                        <li class="menuListBestFutTime" title="Июнь">Июнь</li>
+                        <li class="menuListBestFutTime" title="Июль">Июль</li>
+                        <li class="menuListBestFutTime" title="Август">Август</li>
+                        <li class="menuListBestFutTime" title="Сентябрь">Сентябрь</li>
+                        <li class="menuListBestFutTime" title="Октябрь">Октябрь</li>
+                        <li class="menuListBestFutTime" title="Ноябрь">Ноябрь</li>
+                        <li class="menuListBestFutTime" title="Декабрь">Декабрь</li>
+                    </ul>
+                    <div class="clear"></div>
+                    <ul class="menuListBest">
+                    	<li><a href="#" title="Не верю ;)">Не верю ;)</a></li>
+                    	<li><a href="#" class="menuListBestBajan" title="Баян">[:||||||:]</a></li>
+                    </ul>
+                     </div>
+                     <!--Конец вставки меню Лучшее-->
+                     
+                     
+                     
+                     
+                     <!--Пагинация для первой страницы-->
+                     <div class="pagination1" hidden>
+                        <p><span class="grayAarrows" title="Назад">&#8592;</span> 1 &nbsp;&nbsp;<a href="#">2</a>&nbsp;&nbsp; <a href="#">3</a>&nbsp;&nbsp;<span class="grayPoints">...</span>  <a href="#">14</a>&nbsp; <a href="#" class="arrows"  title="Вперед">&#8594;</a></p>
+                    </div>
+                    <!-- Пагинация для страниц после 3
+                    <div id="pagination1">
+                        <p><a href="#" class="arrows" title="Назад">&#8592;</a>&nbsp; <a href="#">1</a>  <span class="grayPoints">...</span>  <a href="#">6</a>&nbsp;&nbsp;   7&nbsp;&nbsp;   <a href="#">8</a>&nbsp;  <span class="grayPoints">...</span>  <a href="#">14</a>&nbsp; <a href="#" class="arrows" title="Вперед">&#8594;</a></p>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+<!--Конец хэдера для всех остальных страниц-->
+        
+
+
+
+<!--Начало скрытого слоя формы добавления шутки для страницы ДОБАВИТЬ-->
+        <div id="content">
+            <div id="icontent">
+                <div class="jokeBlock1">
+                    <div class="topCont"></div>
+                    <div class="middleCont">
+    <!--Общая информация-->
+                        <p class="addjokeP">
+                            Отправляя цитату через эту форму, вы подтверждаете, что читали пользовательское соглашение и согласны с ним.<br /><br />
+                            Правила просты:<br />
+                            1. Цитаты принимаются только через эту форму. Другого способа прислать цитату не существует.<br />
+                            2. Слишком длинные цитаты никогда не проходят модерацию.<br />
+                            3. Мы никогда и никому не дадим ваш e-mail. Указывать его необязательно, но вы можете сделать это, если хотите оставить нам возможность связаться с вами.<br />
+                            4. Не ведитесь на флешмобы. Бездна — не форум.<br />
+                            5. Если таймстампы в цитате не несут смысловой нагрузки — смело убирайте их.<br />
+                        </p>
+    <!--Конец общая информация-->
+    <!--Выбор рубрики-->
+                        <div id="selectSection">
+                            <h2>Выберите рубрику</h2>
+                            <p class="addjokeP"><span class="grayText">Пока что можно добавлять шутки в эти рубрики. В остальные мы добавляем сами :)</span></p>
+                            <input type="radio" name="Section" class="inputRadio" id="shortSelect"/><label for="shortSelect"><span class="radioButPadding">Короткие</span></label><br/>
+                            <input type="radio" name="Section" class="inputRadio" id="shortCitations"/><label for="shortCitations"><span class="radioButPadding">Цитаты</span></label><br/>
+                            <input type="radio" name="Section" class="inputRadio" id="shortStories"/><label for="shortStories"><span class="radioButPadding">Истории</span></label><br/>
+                            <input type="radio" name="Section" class="inputRadio" id="shortJokes"/><label for="shortJokes"><span class="radioButPadding">Анекдоты</span></label><br/>
+                            <input type="radio" name="Section" class="inputRadio" id="shortStatus"/><label for="shortStatus"><span class="radioButPadding">Статусы</span></label><br/>
+                        </div>
+    <!--Конец выбора рубрики-->
+    <!--Поле добавления шутки-->
+                        <h2>Поле для добавления шутки <span class="symbolsLeft">Осталось символов: 299</span></h2>
+                        <div id="jokeTextAreaBlock">
+                            <textarea name="shot" class="" id="jokeAddTextArea">:)</textarea>
+                        </div>
+    <!--Конец поля добавления шутки-->
+    <!--E-mail-->
+                        <div id="e-mailInput">
+                            <h2>Ваша почта</h2>
+                            <p class="addjokeP"><span class="grayText">Если вдруг нам нужно будет связаться с вами. Скорее всего, это никогда не произойдет, но на всякий случай мы оставили это необязательное поле.</span></p>
+                            <input type="text" value="Ваша почта" id="emailInput"/>
+                        </div>
+    <!--Капча-->
+                        <h2>Защита от зачатков искусственного интеллекта</h2>
+                        <div id="kapcha"></div>
+    <!--Сообщения об ошибках-->
+                        <p class="AddError">Забыли добавить шутку ?</p>
+                        <p class="AddError">Поле капчи не заполнено</p>
+                        <p class="AddError">Код картинки не совпадает с указанным.</p>
+    <!--Кнопка Отправить-->
+                        <div id="sendButton"></div>
+                        <div id="empty"></div>
+                    </div>
+                    <div class="bottomCont">
+
+                    </div>
+                </div>
+    <!--Конец блока добавления шутки-->
+
+    <!-- Баннер -->
+                <div class="mainPageBanner">
+                    <a href="#" class="mainPageBannerA"></a>
+                </div>
+    <!-- Конец Баннера -->
+                </div>
+                <div class="clear"></div>
+        </div>
+        <div class="empty"></div>
+<!--Конец скрытого слоя формы добавления шутки для страницы ДОБАВИТЬ-->
+
+
+
+
+<!--Начало скрытого слоя текстовой страницы-->
+        <div id="content" hidden>
+            <div id="icontent">
+                <div class="jokeBlock1">
+                    <div class="topCont"></div>
+                    <div class="middleCont">
+    <!--Начало блока с Текстом-->
+                        <p class="addjokeP">
+                            Отправляя цитату через эту форму, вы подтверждаете, что читали пользовательское соглашение и согласны с ним.<br /><br />
+                            Правила просты:<br />
+                            1. Цитаты принимаются только через эту форму. Другого способа прислать цитату не существует.<br />
+                            2. Слишком длинные цитаты никогда не проходят модерацию.<br />
+                            3. Мы никогда и никому не дадим ваш e-mail. Указывать его необязательно, но вы можете сделать это, если хотите оставить нам возможность связаться с вами.<br />
+                            4. Не ведитесь на флешмобы. Бездна — не форум.<br />
+                            5. Если таймстампы в цитате не несут смысловой нагрузки — смело убирайте их.<br />
+                        </p>
+                    </div>
+                    <div class="bottomCont">
+                    </div>
+                </div>
+    <!--Конец блока с Текстом-->
+
+                </div>
+                <div class="clear"></div>
+        </div>
+        <div class="empty"></div>
+<!--Конец скрытого слоя текстовой страницы-->
+
+
+
+
+<!--Начало блоков с ШУТКАМИ-->
+        <div id="content" hidden>
+            <div id="icontent">
+    <!--Начало шутки1-->
+                <div class="jokeBlock1">
+                    <div class="topCont">
+                        <div class="jokeRating">
+                            <div class="ratingNum">+5541</div>
+                            <div class="ratingButtons">
+                                <ul>
+                                	<li class="buttonLike"></li>
+                                	<li class="buttonMiddle"></li>
+                                	<li class="buttonDisLike"></li>
+                                </ul>
+
+                            </div>
+                            
+                            <div class="disLikeButtons">
+                                <ul>
+                                	<li class="buttonDontBeleive"></li>
+                                	<li class="buttonBajan"></li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="middleCont">
+                        <p>- Это Бля Агапова!<br />
+                           - Здравствуй, Бля Агапова, хуле ты хотела?<br />
+                           - Ой, простите, Елена Вячеславовна, я вместо "Ю" нечаянно "Б" поставила... :-[<br />
+                           - Да ничего страшного, я в слове "что" тоже опечаталась...<br />
+                        </p>
+                        <div class="SocNetIcons">
+                            <ul>
+                           	    <li class="shareTwitter"></li>
+                           	    <li class="shareLj"></li>
+                                <li class="shareOd"></li>
+                                <li class="shareFb"></li>
+                                <li class="shareMailru"></li>
+                                <li class="shareVk"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottomCont">
+                        <p class="jokeTimeAndNum"><a class="jokeSection" href="#">Цитаты</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jokeAddTime">2007-01-25 02:52</span>&nbsp;&nbsp; #123</p>
+                    </div>
+                </div>
+    <!--Конец шутки1-->
+    <!--Начало шутки2-->
+                <div class="jokeBlock1">
+                    <div class="topCont">
+                        <div class="jokeRating">
+                            <div class="ratingNum">+5541</div>
+                            <div class="ratingButtons">
+                                <ul>
+                                	<li class="buttonLike"></li>
+                                	<li class="buttonMiddle"></li>
+                                	<li class="buttonDisLike"></li>
+                                </ul>
+                            </div>
+                            <div class="disLikeButtons">
+                                <ul>
+                                	<li class="buttonDontBeleive"></li>
+                                	<li class="buttonBajan"></li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="middleCont">
+                        <p>Смотрел вот список немецких имен:<br />
+                            Эб – сильный как боров<br />
+                            Эберард – сильный как боров<br />
+                            Эберт – сильный как боров<br />
+                            Эберхард – сильный как боров<br />
+                            Эбнер – отец<br />
+                            Эверт – сильный как боров<br />
+                            
+                            Переводы имен блещат разнообразием...<br />
+                        </p>
+                        <div class="SocNetIcons">
+                            <ul>
+                           	    <li class="shareTwitter"></li>
+                           	    <li class="shareLj"></li>
+                                <li class="shareOd"></li>
+                                <li class="shareFb"></li>
+                                <li class="shareMailru"></li>
+                                <li class="shareVk"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottomCont">
+                        <p class="jokeTimeAndNum"><a class="jokeSection" href="#">Цитаты</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jokeAddTime">2007-01-25 02:52</span>&nbsp;&nbsp; #123</p>
+                    </div>
+                </div>
+    <!--Конец шутки2-->
+    <!--Начало демотиватора1-->
+                <div class="jokeBlock1">
+                    <div class="topCont">
+                        <div class="jokeRating">
+                            <div class="ratingNum" title="Рейтинг цитаты">+5541</div>
+                            <div class="ratingButtons">
+                                <ul>
+                                	<li class="buttonLike" title="Смешно :)"></li>
+                                	<li class="buttonMiddle" title="Так себе :|"></li>
+                                	<li class="buttonDisLike" title="В топку!"></li>
+                                </ul>
+                            </div>
+                            <div class="disLikeButtons">
+                                <ul>
+                                	<li class="buttonDontBeleive" title="Не верю ;)"></li>
+                                	<li class="buttonBajan" title="Баян"></li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="middleCont">
+                        <div class="SocNetIcons">
+                            <ul>
+                           	    <li class="shareTwitter" title="Поделиться в Twitter"></li>
+                           	    <li class="shareLj" title="Поделиться в Живом Журнале"></li>
+                                <li class="shareOd" title="Поделиться в Одноклассниках"></li>
+                                <li class="shareFb" title="Поделиться в Facebook"></li>
+                                <li class="shareMailru" title="Поделиться в Моем Мире"></li>
+                                <li class="shareVk" title="Поделиться в Вконтакте"></li>
+                            </ul>
+                        </div>
+                        <div class="demContent">
+                            <h2><a href="#">Часть 1</a></h2>
+                            <p>Свежая подборка демотиваторов. Предыдущую часть <a href="#" title="Демотиваторы часть 1" >смотрим тут</a>.</p>
+                            <a href="#"><img src="images/dem1.jpg"/></a>
+                            <p>Комментариев <a href="#">5</a></p>
+                            <p class="tags">Теги: <a href="#">Вкусняшки</a>&nbsp;&nbsp;<a href="#">Хуяшки</a></p>
+                        </div>
+                    </div>
+                    <div class="bottomCont">
+                        <p class="jokeTimeAndNum"><a class="jokeSection" href="#" title="Цитаты">Демотиваторы</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jokeAddTime">2007-01-25 02:52</span>&nbsp;&nbsp; #123</p>
+                    </div>
+                </div>
+    <!--Конец демотиватора1-->
+    <!--Начало шутки3-->
+                <div class="jokeBlock1">
+                    <div class="topCont">
+                        <div class="jokeRating">
+                            <div class="ratingNum">+5541</div>
+                            <div class="ratingButtons">
+                                <ul>
+                                	<li class="buttonLike"></li>
+                                	<li class="buttonMiddle"></li>
+                                	<li class="buttonDisLike"></li>
+                                </ul>
+                            </div>
+                            <div class="disLikeButtons">
+                                <ul>
+                                	<li class="buttonDontBeleive"></li>
+                                	<li class="buttonBajan"></li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="middleCont">
+                        <p>
+                            Да-да:
+                            Ну-ну:<br />
+                            В контакте:<br />
+                            29 февраля страдающие от безответной любви девушки, не боясь косых взглядов и общественного осуждения, могут сделать предложение понравившемуся мужчине. Согласно шотландской традиции, если избранник отвечает отказом, то ему придётся заплатить 100 фунтов.<br />
+                            
+                            ххх: это ж как навариться можно ))<br />
+                            ххх: 100 фунтов = 5000 р., десять мужиков - 50000, двести мужиков - миллион )) за сколько времени среднестатистическая барышня может безуспешно попытаться окрутить двести мужиков? )) допустим, три минуты на мужика - десять часов работы, и барышня миллионер ))<br />
+                            ууу: Все мужики в этот день закрываются в подвале)))<br />
+                            
+                            Дуры, кто вам сказал что штраф взымается в пользу девушки?<br />
+                            
+                            Штраф взимается в пользу девушки. Только девушки обязаны были, направляясь делать предложение, одевать бордовые юбки, заметные издалека. Если парень, видя юбку, не скрывался и получал предложение, то потом обязан был выплатить компенсацию за унижающий девушку отказ.<br />
+                        </p>
+                        <div class="SocNetIcons">
+                            <ul>
+                           	    <li class="shareTwitter"></li>
+                           	    <li class="shareLj"></li>
+                                <li class="shareOd"></li>
+                                <li class="shareFb"></li>
+                                <li class="shareMailru"></li>
+                                <li class="shareVk"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottomCont">
+                        <p class="jokeTimeAndNum"><a class="jokeSection" href="#">Истории</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jokeAddTime">2007-01-25 02:52</span>&nbsp;&nbsp; #123</p>
+                    </div>
+                </div>
+        <!--Конец шутки3-->
+        <!--Начало шутки4-->
+                <div class="jokeBlock1">
+                    <div class="topCont">
+                        <div class="jokeRating">
+                            <div class="ratingNum">+5541</div>
+                            <div class="ratingButtons">
+                                <ul>
+                                	<li class="buttonLike"></li>
+                                	<li class="buttonMiddle"></li>
+                                	<li class="buttonDisLike"></li>
+                                </ul>
+                            </div>
+                            <div class="disLikeButtons">
+                                <ul>
+                                	<li class="buttonDontBeleive"></li>
+                                	<li class="buttonBajan"></li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="middleCont">
+                        <p>xxx: Выяснила, наконец, ху зе фак из Стас Михайлов, и решительно его послушала. По-моему, в нашей стране под прикрытием шоу-бизнеса выпускают и совершенствуют психотронное оружие.решительно его послушала. По-моему, в нашей стране под прикрытием шоу-бизнеса 
+                        </p>
+                        <div class="SocNetIcons">
+                            <ul>
+                           	    <li class="shareTwitter"></li>
+                           	    <li class="shareLj"></li>
+                                <li class="shareOd"></li>
+                                <li class="shareFb"></li>
+                                <li class="shareMailru"></li>
+                                <li class="shareVk"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottomCont">
+                        <p class="jokeTimeAndNum"><a class="jokeSection" href="#">Короткие</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jokeAddTime">2007-01-25 02:52</span>&nbsp;&nbsp; #123</p>
+                    </div>
+                </div>
+        <!--Конец шутки4--> 
+        <!-- Баннер -->
+                <div class="mainPageBanner">
+                    <a href="#" class="mainPageBannerA"></a>
+                </div>
+        <!-- Конец Баннера -->
+        <!--Начало шутки5-->
+                <div class="jokeBlock1">
+                    <div class="topCont">
+                        <div class="jokeRating">
+                            <div class="ratingNum">+5541</div>
+                            <div class="ratingButtons">
+                                <ul>
+                                	<li class="buttonLike"></li>
+                                	<li class="buttonMiddle"></li>
+                                	<li class="buttonDisLike"></li>
+                                </ul>
+
+                            </div>
+                            
+                            <div class="disLikeButtons">
+                                <ul>
+                                	<li class="buttonDontBeleive"></li>
+                                	<li class="buttonBajan"></li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="middleCont">
+                        <p>- Это Бля Агапова!<br />
+                           - Здравствуй, Бля Агапова, хуле ты хотела?<br />
+                           - Ой, простите, Елена Вячеславовна, я вместо "Ю" нечаянно "Б" поставила... :-[<br />
+                           - Да ничего страшного, я в слове "что" тоже опечаталась...<br />
+                        </p>
+                        <div class="SocNetIcons">
+                            <ul>
+                           	    <li class="shareTwitter"></li>
+                           	    <li class="shareLj"></li>
+                                <li class="shareOd"></li>
+                                <li class="shareFb"></li>
+                                <li class="shareMailru"></li>
+                                <li class="shareVk"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottomCont">
+                        <p class="jokeTimeAndNum"><a class="jokeSection" href="#">Цитаты</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jokeAddTime">2007-01-25 02:52</span>&nbsp;&nbsp; #123</p>
+                    </div>
+                </div>
+    <!--Конец шутки5-->
+    <!--Начало шутки6-->
+                <div class="jokeBlock1">
+                    <div class="topCont">
+                        <div class="jokeRating">
+                            <div class="ratingNum">+5541</div>
+                            <div class="ratingButtons">
+                                <ul>
+                                	<li class="buttonLike"></li>
+                                	<li class="buttonMiddle"></li>
+                                	<li class="buttonDisLike"></li>
+                                </ul>
+                            </div>
+                            <div class="disLikeButtons">
+                                <ul>
+                                	<li class="buttonDontBeleive"></li>
+                                	<li class="buttonBajan"></li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="middleCont">
+                        <p>Смотрел вот список немецких имен:<br />
+                            Эб – сильный как боров<br />
+                            Эберард – сильный как боров<br />
+                            Эберт – сильный как боров<br />
+                            Эберхард – сильный как боров<br />
+                            Эбнер – отец<br />
+                            Эверт – сильный как боров<br />
+                            
+                            Переводы имен блещат разнообразием...<br />
+                        </p>
+                        <div class="SocNetIcons">
+                            <ul>
+                           	    <li class="shareTwitter"></li>
+                           	    <li class="shareLj"></li>
+                                <li class="shareOd"></li>
+                                <li class="shareFb"></li>
+                                <li class="shareMailru"></li>
+                                <li class="shareVk"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottomCont">
+                        <p class="jokeTimeAndNum"><a class="jokeSection" href="#">Цитаты</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jokeAddTime">2007-01-25 02:52</span>&nbsp;&nbsp; #123</p>
+                    </div>
+                </div>
+    <!--Конец шутки6-->
+    <!--Начало шутки7-->
+                <div class="jokeBlock1">
+                    <div class="topCont">
+                        <div class="jokeRating">
+                            <div class="ratingNum">+5541</div>
+                            <div class="ratingButtons">
+                                <ul>
+                                	<li class="buttonLike"></li>
+                                	<li class="buttonMiddle"></li>
+                                	<li class="buttonDisLike"></li>
+                                </ul>
+                            </div>
+                            <div class="disLikeButtons">
+                                <ul>
+                                	<li class="buttonDontBeleive"></li>
+                                	<li class="buttonBajan"></li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="middleCont">
+                        <p>
+                            Да-да:
+                            Ну-ну:<br />
+                            В контакте:<br />
+                            29 февраля страдающие от безответной любви девушки, не боясь косых взглядов и общественного осуждения, могут сделать предложение понравившемуся мужчине. Согласно шотландской традиции, если избранник отвечает отказом, то ему придётся заплатить 100 фунтов.<br />
+                            
+                            ххх: это ж как навариться можно ))<br />
+                            ххх: 100 фунтов = 5000 р., десять мужиков - 50000, двести мужиков - миллион )) за сколько времени среднестатистическая барышня может безуспешно попытаться окрутить двести мужиков? )) допустим, три минуты на мужика - десять часов работы, и барышня миллионер ))<br />
+                            ууу: Все мужики в этот день закрываются в подвале)))<br />
+                            
+                            Дуры, кто вам сказал что штраф взымается в пользу девушки?<br />
+                            
+                            Штраф взимается в пользу девушки. Только девушки обязаны были, направляясь делать предложение, одевать бордовые юбки, заметные издалека. Если парень, видя юбку, не скрывался и получал предложение, то потом обязан был выплатить компенсацию за унижающий девушку отказ.<br />
+                        </p>
+                        <div class="SocNetIcons">
+                            <ul>
+                           	    <li class="shareTwitter"></li>
+                           	    <li class="shareLj"></li>
+                                <li class="shareOd"></li>
+                                <li class="shareFb"></li>
+                                <li class="shareMailru"></li>
+                                <li class="shareVk"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottomCont">
+                        <p class="jokeTimeAndNum"><a class="jokeSection" href="#">Истории</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jokeAddTime">2007-01-25 02:52</span>&nbsp;&nbsp; #123</p>
+                    </div>
+                </div>
+        <!--Конец шутки7-->
+        <!--Начало шутки8-->
+                <div class="jokeBlock1">
+                    <div class="topCont">
+                        <div class="jokeRating">
+                            <div class="ratingNum">+5541</div>
+                            <div class="ratingButtons">
+                                <ul>
+                                	<li class="buttonLike"></li>
+                                	<li class="buttonMiddle"></li>
+                                	<li class="buttonDisLike"></li>
+                                </ul>
+                            </div>
+                            <div class="disLikeButtons">
+                                <ul>
+                                	<li class="buttonDontBeleive"></li>
+                                	<li class="buttonBajan"></li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="middleCont">
+                        <p>xxx: Выяснила, наконец, ху зе фак из Стас Михайлов, и решительно его послушала. По-моему, в нашей стране под прикрытием шоу-бизнеса выпускают и совершенствуют психотронное оружие.решительно его послушала. По-моему, в нашей стране под прикрытием шоу-бизнеса 
+                        </p>
+                        <div class="SocNetIcons">
+                            <ul>
+                           	    <li class="shareTwitter"></li>
+                           	    <li class="shareLj"></li>
+                                <li class="shareOd"></li>
+                                <li class="shareFb"></li>
+                                <li class="shareMailru"></li>
+                                <li class="shareVk"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottomCont">
+                        <p class="jokeTimeAndNum"><a class="jokeSection" href="#">Короткие</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="jokeAddTime">2007-01-25 02:52</span>&nbsp;&nbsp; #123</p>
+                    </div>
+                </div>
+        <!--Конец шутки8-->
+        <!--Нижняя пагинация-->
+            <!--Пагинация для первой страницы-->
+                     <div class="pagination2">
+                        <p><span class="grayAarrows" title="Назад">&#8592;</span> 1 &nbsp;&nbsp;<a href="#">2</a>&nbsp;&nbsp; <a href="#">3</a>&nbsp;&nbsp;<span class="grayPoints">...</span>  <a href="#">14</a>&nbsp; <a href="#" class="arrows"  title="Вперед">&#8594;</a></p>
+                    </div>
+                    <!-- Пагинация для страниц после 3
+                    <div id="pagination1">
+                        <p><a href="#" class="arrows" title="Назад">&#8592;</a>&nbsp; <a href="#">1</a>  <span class="grayPoints">...</span>  <a href="#">6</a>&nbsp;&nbsp;   7&nbsp;&nbsp;   <a href="#">8</a>&nbsp;  <span class="grayPoints">...</span>  <a href="#">14</a>&nbsp; <a href="#" class="arrows" title="Вперед">&#8594;</a></p>
+                    </div>
+                    --> 
+        <!--Конец Нижняя пагинация-->         
+            </div>
+        </div>
+<!--Конец блоков с шутками-->
+
+
+
+
+<!--Начало футера-->
+        <div class="footer">
+            <div class="footerL" >
+                <div id="ifooter">
+                    <div class="dotLine3"></div>
+                    <ul class="menuList">
+                       	<li><a href="#" class="menuListActive">Все</a></li>
+                       	<li><a href="#">Лента</a></li>
+                       	<li><a href="#">Цитаты</a></li>
+                       	<li><a href="#">Истории</a></li>
+                        <li><a href="#">Анекдоты</a></li>
+                        <li><a href="#">Демотиваторы</a></li>
+                        <li><a href="#">Статусы</a></li>
+                        <li><a href="#" title="Видео">Видео</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                    <ul class="menuList">
+                   	    <li><a href="#">Новые</a></li>
+                       	<li><a href="#">Случайные</a></li>
+                       	<li><a href="#" class="menuListActive">Лучшие</a></li>
+                       	<li><a href="#">Добавить</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                    <div class="dotLine4"></div>
+                    <p class="footerP">
+                        © 2012 — <a href="#">John</a> &#38; <a href="#">John</a>.<br />
+                        Использование сайта подразумевает согласие с <a href="#">Пользовательским соглашением</a>.<br />
+                        <a href="#">Рекламодателям</a>. По другим поводам: <a href="#">support@smehofor.com</a>
+                    </p>
+                    <div id="cointers">
+                        <ul>
+                        	<li class="coint1"></li>
+                        	<li class="coint2"></li>
+                        	<li class="coint3"></li>
+                        	<li class="coint4"></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div id="bottomLine"></div>
+        </div>
+<!--Конец футера-->
+    </div>
+<!--Конец wrapper-->
+</body>
+</html>

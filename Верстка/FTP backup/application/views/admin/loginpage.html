@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Amule</title>
+<link href="/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+.block
+{
+   position: absolute;  
+   overflow: auto;  
+   left: 50%;  
+   top: 50%;  
+   margin-left: -125px;  
+   margin-top: -125px;  
+}
+</style> 
+
+<body class="login-body" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">
+<div class="block">
+	<table border="0" cellpadding="0" cellspacing="0" class="login-table">
+      <tr><td>
+	    <table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+		<td class="login-title-l"><img width="8" height="30" src="/images/admin/ft-left.png"></td>
+		<td class="login-title">Авторизация</td>
+		<td class="login-title-r"><img width="8" height="30" src="/images/admin/ft-right.png"></td>
+		</tr>
+        </table>
+      </td></tr>
+  <tr><td class="login-content">
+<div align="center"><img width="64" height="64" vspace="15" border="0" src="/images/admin/amule.png"></div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<form method="post" action="">
+<tr>
+<td class="login-field-title" width="35%">Логин</td>
+<td class="login-field-content"><input type="text" name="username" id="username" value="<?php echo $username;?>" class="login-input" style="width:80%"></td>
+</tr>
+<tr>
+<td class="login-field-title">Пароль</td>
+
+<td class="login-field-content"><input type="password" name="userpass" size="12" value="<?php echo $userpass;?>" class="login-input" style="width:80%"></td>
+</tr>
+
+<tr>
+
+
+<tr>
+<td></td>
+<td class="login-field-content">
+<input type="submit" class="login-button" value="Войти" name="login"><input type="hidden" name="func" value="auth">
+</td>
+</tr>
+<tr><td colspan="2" class="login-field-content login-register" align="center"></td></tr>
+</form>
+</table>
+
+</td></tr>
+</table>
+</div>
+</body>
+</html>

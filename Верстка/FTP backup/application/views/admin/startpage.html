@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Админко</title>
+	<meta name="title" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="css/panel-style.css" type="text/css" media="screen, projection" />
+
+    <script type="text/javascript" src="/js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="/js/swfobject.js"></script>
+    <script type="text/javascript" src="/js/jquery.uploadify.v2.1.4.min.js"></script>
+    <script type="text/javascript" src="/js/tiny_mce/tiny_mce.js"></script>
+</head>
+<script type="text/JavaScript">
+var type=1;
+function ajaxContent()
+{
+    // послыаем AJAX запрос, который вернёт список 
+jQuery.ajax({
+          url: 'ajax/adminRouter',
+          type: 'POST',
+          data: $("#contentForm").serialize()+"&type="+type,
+          success: function(data)
+          {
+            $('#ajaxContent').html(data);
+          }
+        });
+
+}
+
+
+
+function ajaxPagesContent()
+{
+    // послыаем AJAX запрос, который вернёт список 
+jQuery.ajax({
+          url: 'ajax/adminPages',
+          type: 'POST',
+          data: $("#contentForm").serialize()+"&type="+type,
+          success: function(data)
+          {
+            $('#ajaxContent').html(data);            
+          }
+        });
+
+}
+
+$(function(){
+$(".topMenu a,#sideLeft a").live("mouseover", function(event){
+$(".topMenu a").css({'font-size':'12px','font-variant':'inherit'});
+$("#sideLeft a").css({'font-size':'12px','font-variant':'inherit'});
+$(this).css({'font-size':'14px','font-variant':'small-caps'});
+})
+
+$(".topMenu a,#sideLeft a").live("mouseout", function(event){
+$(".topMenu a").css({'font-size':'12px','font-variant':'inherit'});
+$("#sideLeft a").css({'font-size':'12px','font-variant':'inherit'});
+})
+
+$(".topMenu a").click(function(){
+$(".topMenu a").css({'color':'black','font-weight':'normal'});
+$(this).css({'color':'green','font-weight':'600'});
+})
+
+$("#sideLeft li.jokes a").live("click", function(event){
+    $("#sideLeft a").css({'color':'black','font-weight':'normal'});
+    $(this).css({'color':'green','font-weight':'600'});
+    type=$(this).attr('rel');
+    
+    ajaxContent();
+});
+
+
+
+
+
+$("#content .submit").live("click", function(event){
+    $("#content input.action").val($(this).val());
+    ajaxContent();
+});
+
+
+
+$("#sideLeft li.pages a").click(function(event){
+    $("#sideLeft a").css({'color':'black','font-weight':'normal'});
+    $(this).css({'color':'green','font-weight':'500'});
+    type=$(this).attr('rel');
+    
+    ajaxPagesContent();
+});
+
+
+$("#content .pageSubmit").live("click", function(event){
+    $("#content input.action").val($(this).val());
+    ajaxPagesContent();
+});
+
+});
+
+
+$(document).ready(function() {
+    $("#ID_DIV_TO_UPLOAD").uploadify({// указываем слой в котором будет происходить всё это мракобесие
+        'uploader'       : '/images/uploadify.swf', // путь на фтп к флеш из библиотеки uploadify
+        'script'         : '/core/fileLoader',// путь к серверному скрипту обработки файла 
+        'folder'         : '/upload', // папка в которую будут аплодиться файлы
+        'queueID'        : 'fileQueue',   // какой-то важный параметр     
+        'auto'           : true,
+        'multi'          : false, 
+        'onOpen'         : function() {
+                          $('#ID_IMG_ANIMATION_LOAD').css('display','block'); 
+// тут я показываю что загрузка началась . Т.е делаю видимой картинку с анимацией загрузки.
+                         },   
+        'onComplete'   : function(event,queueID,fileObj,response,data) {
+                          $('#ID_IMG_ANIMATION_LOAD').css('display','none'); 
+                              //Как файл загрузился анимацию снова делаю невидимой 
+
+                          $('#ID_DIV_TO_ANSWER_FROM_SERVER').html(response); // ответ от сервера возвращается сюда
+                         },
+        'fileDesc'   : 'jpg; gif; png; jpeg; avi; flv;',  // тут всё очень сложно
+        'fileExt'   : '*.jpg;*.gif;*.png;*.jpeg;*.avi;*.flv;', // здесь ещё сложнее
+        'width' : '150', // ширина и высота кнопки, якобы. Точнее места под кнопку
+        'height' : '40'
+    });
+});
+
+// функция удаления загруженных файлов 
+function uploadedFileDelete(name)
+{
+jQuery.ajax({
+          url: '/core/fileLoader',
+          type: 'POST',
+          data: 'del='+name,
+          success: function(data) 
+          {
+              $('#ID_DIV_TO_ANSWER_FROM_SERVER').html(data); 
+             // так же возвращается ответ с сервера в виде списка оставшихся файлов
+          }
+        });
+}
+
+$(function(){
+    $(".CLASS_FILE_DELETE").live("click", function(event){
+     uploadedFileDelete($(this).attr('rel'));
+   });
+});
+
+</script>
+
+<body>
+
+<div id="wrapper">
+
+	<div id="header">
+    <table  class="topMenu" border="0">
+    <tr> 
+    	<td align="center" ><a href="javascript:;"><img  src="/images/admin/advancedsettings.png" /><br><span >Настройки</span></a></td>
+        <td align="center"><a href="javascript:;"><img  src="/images/admin/handbook.png" /><br><span >Справочники</span></a></td>
+        <td align="center"><a href="javascript:;"><img  src="/images/admin/tourism.png" /><br><span>Туризм</span></a></td>        
+        <td align="center"><a href="javascript:;"><img  src="/images/admin/financeX48.png" /><br><span>Финансы</span></a></td>
+        <td align="center"><a href="javascript:;"><img  src="/images/admin/tourtables.png" /><br><span>Таблицы туров</span></a></td>
+        <td align="center"><a href="javascript:;"><img  src="/images/admin/reports.png" /><br><span>Отчёты</span></a></td>        
+    </tr >
+    </table>
+    
+	</div><!-- #header-->
+
+	<div id="middle">
+
+		<div id="container">                     
+         <div id="content">
+         
+        <form id="contentForm">          
+         <div id="ajaxContent">
+         </div>
+        <form>
+         
+         <div id="upContent">
+                  <div  id="ID_DIV_TO_UPLOAD"></div>
+                    <img src="images/admin/small_loader.gif"  id="ID_IMG_ANIMATION_LOAD" style="display: none;" width="15" height="15" />
+                  <div  id="ID_DIV_TO_ANSWER_FROM_SERVER"></div>                  
+         </div>
+         </div><!-- #content-->
+        <form> 
+		</div><!-- #container-->
+
+		<div class="sidebar" id="sideLeft">
+<ul>
+                <?php 
+                $menuObj="";
+                for($i=0; $i<count($list);$i++){
+                    $img="/images/admin/".$list[$i]['type'].".png";
+                    if(!file_exists($_SERVER['DOCUMENT_ROOT'].$img))
+                        $img="/images/admin/0.png";
+       $menuObj.='             
+	<li class="jokes">
+    <a href="javascript:;" rel="'.$list[$i]['type'].'">
+    <table class="leftMenu">
+    <tr valign="middle" >
+    	<td width="50px">        
+        <img src="'.$img.'" /></td><td align="center" ><span>'.$list[$i]['name'].'</span>        
+        </td>
+    </tr >
+    </table>
+    </a>
+	</li> ';  
+                }
+                echo $menuObj;
+                
+                $menuObj="";
+                for($i=0; $i<count($pages);$i++){
+
+       $menuObj.='             
+	<li class="pages">
+        <a href="javascript:;" rel="'.$pages[$i]['id'].'" style="padding-left:10px">
+            '.$pages[$i]['pagetitle'].'
+        </a>
+	</li> ';  
+                }
+                echo $menuObj;                
+                 ?>
+
+                  
+</ul>
+		</div><!-- .sidebar#sideLeft -->
+
+	</div><!-- #middle-->
+
+</div><!-- #wrapper -->
+
+<div id="footer">
+
+	<strong>Footer:</strong> Mus elit Morbi mus enim lacus at quis Nam eget morbi. Et semper urna urna non at cursus dolor vestibulum neque enim. Tellus interdum at laoreet laoreet lacinia lacinia sed Quisque justo quis. Hendrerit scelerisque lorem elit orci tempor tincidunt enim Phasellus dignissim tincidunt. Nunc vel et Sed nisl Vestibulum odio montes Aliquam volutpat pellentesque. Ut pede sagittis et quis nunc gravida porttitor ligula.
+</div><!-- #footer -->
+
+</body>
+</html>
